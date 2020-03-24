@@ -1,4 +1,4 @@
-import { ICompany } from './../../models/Company'
+import { ICompany } from '../../models/Company'
 import { HTTPListResponseType } from '../../../core/models/HTTPResponseType'
 
 export const FETCH_ALL = 'COMPANIES_FETCH_ALL'
@@ -12,38 +12,36 @@ export const REMOVE_ONE = 'COMPANIES_REMOVE_ONE'
 export const ADD_OR_UPDATE = 'COMPANIES_ADD_OR_UPDATE'
 
 interface FetchCompaniesAction {
-	type: typeof FETCH_ALL
+  type: typeof FETCH_ALL
 }
 
 interface SetCompaniesAction {
-	type: typeof SET_ALL
-	companies: HTTPListResponseType
+  type: typeof SET_ALL
+  companies: HTTPListResponseType
 }
 
 interface FetchCompanyAction {
-	type: typeof FETCH_ONE
-	companyId: string
+  type: typeof FETCH_ONE
+  companyId: string
 }
 
 interface SetCurrentAction {
-	type: typeof SET_CURRENT
-	company: ICompany
+  type: typeof SET_CURRENT
+  company: ICompany
 }
 
 interface ResetCurrentAction {
-	type: typeof RESET_CURRENT
+  type: typeof RESET_CURRENT
 }
 
 interface RemoveOneAction {
-	type: typeof REMOVE_ONE
-	company: ICompany
+  type: typeof REMOVE_ONE
+  company: ICompany
 }
 
 interface CreateOrUpdateAction {
-	type: typeof ADD_OR_UPDATE
-	company: ICompany
+  type: typeof ADD_OR_UPDATE
+  company: ICompany
 }
 
-export type CompaniesActionTypes =
-	FetchCompaniesAction | SetCompaniesAction | SetCurrentAction | FetchCompanyAction | ResetCurrentAction | RemoveOneAction |
-	CreateOrUpdateAction
+export type CompaniesActionTypes = FetchCompaniesAction | SetCompaniesAction | SetCurrentAction | FetchCompanyAction | ResetCurrentAction | RemoveOneAction | CreateOrUpdateAction

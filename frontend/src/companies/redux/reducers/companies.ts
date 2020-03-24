@@ -1,6 +1,6 @@
-import { CompaniesState } from './../system/companies';
-import { CompaniesActionTypes } from './../types/companies';
-import { ICompany } from './../../models/Company';
+import { CompaniesState } from '../system/companies'
+import { CompaniesActionTypes } from '../types/companies'
+import { ICompany } from '../../models/Company'
 import * as companyTypes from '../types/companies'
 
 const defaultState: CompaniesState = {
@@ -16,16 +16,16 @@ export default (state = defaultState, action: CompaniesActionTypes): CompaniesSt
       const { docs, totalDocs, totalPages } = action.companies
       return {
         ...state,
-        list: docs.map((company: any) => (company as ICompany)),
+        list: docs.map((company: any) => company as ICompany),
         total: totalDocs,
         pages: totalPages,
       }
     }
 
-    case companyTypes.SET_CURRENT:
+    case companyTypes.SET_CURRENT: {
       const newData = { current: action.company }
       return { ...state, ...newData }
-
+    }
     case companyTypes.RESET_CURRENT:
       return { ...state, current: undefined }
 

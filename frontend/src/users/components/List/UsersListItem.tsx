@@ -1,9 +1,9 @@
 import React from 'react'
-import { IUser } from '../../models/User'
 import { TableRow, TableCell } from '@material-ui/core'
+import { IUser } from '../../models/User'
 
 type UsersListItemProps = {
-	user: IUser
+  user: IUser
 }
 
 export const UsersListItem: React.FC<UsersListItemProps> = (props: UsersListItemProps) => {
@@ -11,7 +11,9 @@ export const UsersListItem: React.FC<UsersListItemProps> = (props: UsersListItem
 
   return (
     <TableRow>
-      <TableCell component="th" scope="row" align="left">{user.firstname} {user.lastname}</TableCell>
+      <TableCell component="th" scope="row" align="left">
+        {user.firstname} {user.lastname}
+      </TableCell>
       <TableCell align="left">{user.company ? user.company.name : ''}</TableCell>
       <TableCell align="left">{user.job}</TableCell>
       <TableCell align="left">{user.email}</TableCell>

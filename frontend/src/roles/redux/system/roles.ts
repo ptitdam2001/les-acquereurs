@@ -1,8 +1,8 @@
-import { IRole } from '../../models/Role';
+import { IRole } from '../../models/Role'
 
 export interface RolesState {
-	list: IRole[]
+  list: IRole[]
   total: number
   pages: number
-	current?: IRole
+  current?: IRole
 }

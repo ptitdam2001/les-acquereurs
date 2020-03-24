@@ -1,8 +1,8 @@
-import { ICompany } from './../../models/Company'
+import { ICompany } from '../../models/Company'
 
 export interface CompaniesState {
-	list: ICompany[]
+  list: ICompany[]
   total: number
   pages: number
-	current?: ICompany
+  current?: ICompany
 }

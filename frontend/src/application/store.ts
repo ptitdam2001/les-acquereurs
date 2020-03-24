@@ -27,10 +27,5 @@ const rootReducer = combineReducers({
 
 export type RootState = ReturnType<typeof rootReducer>
 
-export const store = createStore(
-  rootReducer,
-  compose(applyMiddleware(thunk, sagaMiddleware), devToolsEnhancer({}))
-)
-;[coreSaga, companySaga, houseSaga, roleSaga, userSaga].map(saga =>
-  sagaMiddleware.run(saga)
-)
+export const store = createStore(rootReducer, compose(applyMiddleware(thunk, sagaMiddleware), devToolsEnhancer({})))
+;[coreSaga, companySaga, houseSaga, roleSaga, userSaga].map((saga) => sagaMiddleware.run(saga))

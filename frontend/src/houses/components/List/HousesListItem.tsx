@@ -22,7 +22,8 @@ export const HousesListItem: React.FC<HousesListItemProps> = (props: HousesListI
   return (
     <>
       <TableRow key={house._id}>
-        <TableCell component="th" scope="row">{house.type}
+        <TableCell component="th" scope="row">
+          {house.type}
         </TableCell>
         <TableCell align="right">{house.roomNumber}</TableCell>
         <TableCell align="right">
@@ -33,17 +34,9 @@ export const HousesListItem: React.FC<HousesListItemProps> = (props: HousesListI
         <TableCell align="right">
           <Box display="flex" flexDirection="row" justifyContent="flex-end">
             <IconButton aria-label="view" onClick={toggleExpend}>
-              <FontAwesomeIcon
-                icon={isExpended ? faFolderOpen : faFolder}
-                size="xs"
-              />
+              <FontAwesomeIcon icon={isExpended ? faFolderOpen : faFolder} size="xs" />
             </IconButton>
-            <IconButton
-              aria-label="remove"
-              onClick={() =>
-                console.log('Implement remove func : ', house._id)
-              }
-            >
+            <IconButton aria-label="remove" onClick={() => console.log('Implement remove func : ', house._id)}>
               <FontAwesomeIcon icon={faTrash} size="xs" />
             </IconButton>
           </Box>
@@ -51,9 +44,7 @@ export const HousesListItem: React.FC<HousesListItemProps> = (props: HousesListI
       </TableRow>
       {isExpended ? (
         <TableRow key={`${house._id}-expended`}>
-          <TableCell colSpan={5}>
-            {JSON.stringify(house, null, 2)}
-          </TableCell>
+          <TableCell colSpan={5}>{JSON.stringify(house, null, 2)}</TableCell>
           <TableCell />
         </TableRow>
       ) : null}

@@ -20,13 +20,7 @@ export const CompanyAdminList: React.FC = () => {
           <Typography variant="h6" style={{ flexGrow: 1 }}>
             Companies
           </Typography>
-          <IconButton
-            component={Link}
-            to={`${match.url}/add`}
-            edge="start"
-            color="inherit"
-            aria-label="Add"
-          >
+          <IconButton component={Link} to={`${match.url}/add`} edge="start" color="inherit" aria-label="Add">
             <PlusIcon />
           </IconButton>
         </Toolbar>

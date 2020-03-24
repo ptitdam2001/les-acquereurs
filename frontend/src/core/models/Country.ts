@@ -1,46 +1,46 @@
 interface ICurrency {
-	code: string
-	name: string
-	symbol: string
+  code: string
+  name: string
+  symbol: string
 }
 
 interface ILanguage {
-	iso639_1: string
-	iso639_2: string
-	name: string
-	nativeName: string
+  iso639_1: string
+  iso639_2: string
+  name: string
+  nativeName: string
 }
 
 interface IRegionalBlock {
-	acronym: string
-	name: string
-	otherAcronyms: string[]
-	otherNames: string[]
+  acronym: string
+  name: string
+  otherAcronyms: string[]
+  otherNames: string[]
 }
 
 export interface ICountry {
-	name: string
-	topLevelDomain: string[]
-	alpha2Code: string
-	alpha3Code: string
-	callingCodes: string[]
-	capital: string
-	altSpellings: string[]
-	region: string
-	subregion: string
-	population: number
-	latlng: number[]
-	demonym: string
-	area: number
-	gini: number
-	timezones: string[]
-	borders: string[]
-	nativeName: string
-	numericCode: string
-	currencies: ICurrency[]
-	languages: ILanguage[]
-	translations: any
-	flag: string
-	regionalBlocs: IRegionalBlock[]
-	cioc: string
+  name: string
+  topLevelDomain: string[]
+  alpha2Code: string
+  alpha3Code: string
+  callingCodes: string[]
+  capital: string
+  altSpellings: string[]
+  region: string
+  subregion: string
+  population: number
+  latlng: number[]
+  demonym: string
+  area: number
+  gini: number
+  timezones: string[]
+  borders: string[]
+  nativeName: string
+  numericCode: string
+  currencies: ICurrency[]
+  languages: ILanguage[]
+  translations: any
+  flag: string
+  regionalBlocs: IRegionalBlock[]
+  cioc: string
 }

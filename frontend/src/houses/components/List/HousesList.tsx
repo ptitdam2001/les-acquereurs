@@ -1,13 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import {
-  Table,
-  TableHead,
-  TableRow,
-  TableCell,
-  TableBody,
-  makeStyles,
-} from '@material-ui/core'
+import { Table, TableHead, TableRow, TableCell, TableBody, makeStyles } from '@material-ui/core'
 
 import { fetchHouses } from '../../redux/actions/houses'
 import { HousesListItem } from './HousesListItem'
@@ -20,14 +13,14 @@ const useStyles = makeStyles(styles)
 export const HousesList: React.FC = () => {
   const classes = useStyles()
   const dispatch = useDispatch()
-  const houses = useSelector((state: RootState) => {
+  const houseList = useSelector((state: RootState) => {
     const { houses } = state
     return houses.list
   })
 
   useEffect(() => {
     dispatch(fetchHouses())
-  }, [])
+  }, [dispatch])
 
   return (
     <Table className={classes.table} size="small">
@@ -42,9 +35,9 @@ export const HousesList: React.FC = () => {
         </TableRow>
       </TableHead>
       <TableBody>
-        {
-          houses.map((row: IHouse) => <HousesListItem house={row} key={row._id} />)
-        }
+        {houseList.map((row: IHouse) => (
+          <HousesListItem house={row} key={row._id} />
+        ))}
       </TableBody>
     </Table>
   )

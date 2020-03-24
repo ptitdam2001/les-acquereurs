@@ -1,4 +1,4 @@
 export interface IPriceHistoricRow {
-  date: Date;
-  price: number;
+  date: Date
+  price: number
 }

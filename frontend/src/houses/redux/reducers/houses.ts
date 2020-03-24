@@ -1,6 +1,6 @@
-import { IHouse } from './../../models/House';
-import { HousesState } from './../system/houses';
-import { HousesActionTypes } from './../types/houses';
+import { IHouse } from '../../models/House'
+import { HousesState } from '../system/houses'
+import { HousesActionTypes } from '../types/houses'
 import * as houseTypes from '../types/houses'
 
 const defaultState: HousesState = {
@@ -16,15 +16,16 @@ export default (state = defaultState, action: HousesActionTypes): HousesState =>
       const { docs, totalDocs, totalPages } = action.houses
       return {
         ...state,
-        list: docs.map((role: any) => (role as IHouse)),
+        list: docs.map((role: any) => role as IHouse),
         total: totalDocs,
         pages: totalPages,
       }
     }
 
-    case houseTypes.SET_CURRENT:
+    case houseTypes.SET_CURRENT: {
       const newData = { current: action.house }
       return { ...state, ...newData }
+    }
 
     case houseTypes.RESET_CURRENT:
       return {

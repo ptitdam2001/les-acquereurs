@@ -15,8 +15,7 @@ function* fetchOneuser(action: any) {
   try {
     const user = yield call(service.getOne, action.userId)
     yield put(setCurrent(user))
-  }
-  catch(error) {
+  } catch (error) {
     yield put(resetCurrent())
   }
 }

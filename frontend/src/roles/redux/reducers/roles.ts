@@ -1,6 +1,6 @@
-import { IRole } from './../../models/Role';
-import { RolesState } from './../system/roles';
-import { RolesActionTypes } from './../types/roles';
+import { IRole } from '../../models/Role'
+import { RolesState } from '../system/roles'
+import { RolesActionTypes } from '../types/roles'
 import * as roleTypes from '../types/roles'
 
 const defaultState: RolesState = {
@@ -16,15 +16,16 @@ export default (state = defaultState, action: RolesActionTypes): RolesState => {
       const { docs, totalDocs, totalPages } = action.roles
       return {
         ...state,
-        list: docs.map((role: any) => (role as IRole)),
+        list: docs.map((role: any) => role as IRole),
         total: totalDocs,
         pages: totalPages,
       }
     }
 
-    case roleTypes.SET_CURRENT:
+    case roleTypes.SET_CURRENT: {
       const newData = { current: action.role }
       return { ...state, ...newData }
+    }
 
     case roleTypes.RESET_CURRENT:
       return {

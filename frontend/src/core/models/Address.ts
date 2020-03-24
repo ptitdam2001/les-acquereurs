@@ -1,7 +1,7 @@
 export interface IAddress {
   way1: string
-  way2 ? : string
-  way3 ? : string
+  way2?: string
+  way3?: string
   postalCode: string
   city: string
   country: string
@@ -15,14 +15,14 @@ export interface ICoordinates {
 export class Address {
   private entity: IAddress
 
-  constructor(defaultAddress ? : IAddress) {
+  constructor(defaultAddress?: IAddress) {
     const voidEntity = {
       way1: '',
       way2: '',
       way3: '',
       postalCode: '',
       city: '',
-      country: ''
+      country: '',
     }
     this.entity = defaultAddress || voidEntity
   }

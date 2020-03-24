@@ -11,12 +11,11 @@ function* fetchCompanies() {
   yield put(setCompanies(companies))
 }
 
-function* fetchOneCompany(action:any) {
+function* fetchOneCompany(action: any) {
   try {
     const company = yield call(service.getOne, action.companyId)
     yield put(setCurrent(company))
-  }
-  catch(error) {
+  } catch (error) {
     yield put(resetCurrent())
   }
 }

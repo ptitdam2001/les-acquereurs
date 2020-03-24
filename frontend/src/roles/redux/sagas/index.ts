@@ -15,8 +15,7 @@ function* fetchOneRole(action: any) {
   try {
     const role = yield call(service.getOne, action.roleId)
     yield put(setCurrent(role))
-  }
-  catch(error) {
+  } catch (error) {
     yield put(resetCurrent())
   }
 }

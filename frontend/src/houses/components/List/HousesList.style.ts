@@ -1,11 +1,11 @@
-import { Theme, createStyles } from '@material-ui/core'
+import { createStyles } from '@material-ui/core'
 
-export default (theme: Theme) =>
+export default () =>
   createStyles({
-		root: {
-			width: '100%',
-		},
-		table: {
-			minWidth: 650,
-		},
-	})
+    root: {
+      width: '100%',
+    },
+    table: {
+      minWidth: 650,
+    },
+  })
