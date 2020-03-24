@@ -1,0 +1,13 @@
+[{
+        "name": "superadmin",
+        "group": "administration",
+        "forbidden": ["nothing"],
+        "active": true
+    },
+    {
+        "name": "admin",
+        "group": "administration",
+        "forbidden": ["nothing"],
+        "active": true
+    }
+]

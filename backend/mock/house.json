@@ -1,0 +1,55 @@
+{
+    "title": "Appartement T2 de 40m2",
+    "comment": "Sans commentaire",
+    "address": {
+        "way1": "2230 avenue de l'europe",
+        "way2": "",
+        "way3": "",
+        "postalCode": 34370,
+        "city": "Catelnau-le-lez",
+        "country": "fr",
+        "loc": {
+            "lon": null,
+            "lat": null
+        }
+    },
+    "type": "appartment",
+    "rooms": [
+        {
+            "type": "bedroom",
+            "surface": 12,
+            "windows": 1,
+            "windowDoors": 0
+        },
+        {
+            "type": "living",
+            "surface": 22,
+            "windows": 2,
+            "windowDoors": 1
+        }
+    ],
+    "globalArea": 47,
+    "insideArea": 47,
+    "carPack": true,
+    "carparkArea": 12,
+    "orientation": "E",
+    "roomNumber": 2,
+    "cellar": false,
+    "cellarArea": 0,
+    "dependencies" : false,
+    "dividing": true,
+    "price": {
+        "price": 150000,
+        "notary_fees": 10000,
+        "commission": 10000,
+        "history": []
+    },
+    "visitCounter": 0,
+    "loaned": false,
+    "furnished": false,
+    "seller": null,
+    "photos": [],
+    "isFavoriteOf": [],
+    "exclusivity": false,
+    "internalCode": ""
+}

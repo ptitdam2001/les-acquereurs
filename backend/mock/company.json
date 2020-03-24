@@ -1,0 +1,17 @@
+{
+    "name": "Century 21Montpellier",
+    "shortname": "c21Mtp",
+    "active": true,
+    "address": {
+        "way1": "1 rue de la discorde",
+        "way2": null,
+        "way3": null,
+        "postalCode": "34000",
+        "city": "Montpellier",
+        "country": "France",
+        "loc": {
+            "lat": null,
+            "lon": null
+        }
+    }
+}
