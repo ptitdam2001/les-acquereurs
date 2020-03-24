@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
 import moment from 'moment'
 import { TableRow, TableCell, Box, IconButton } from '@material-ui/core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
