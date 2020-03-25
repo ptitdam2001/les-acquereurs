@@ -25,10 +25,16 @@ function* createOrUpdate(action: any) {
   yield fetchRoles()
 }
 
+function* removeOne(action: any) {
+  yield call(service.remove, action.role)
+  yield fetchRoles()
+}
+
 function* actionWatcher() {
   yield takeLatest(roleTypes.FETCH_ALL, fetchRoles)
   yield takeEvery(roleTypes.FETCH_ONE, fetchOneRole)
   yield takeEvery(roleTypes.ADD_OR_UPDATE, createOrUpdate)
+  yield takeLatest(roleTypes.REMOVE_ONE, removeOne)
 }
 
 export default function* roleSaga() {
