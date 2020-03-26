@@ -54,7 +54,7 @@ export class RoleService {
   async delete(id: string): Promise<string> {
     return await new Promise((resolve, reject) =>
       this.$model.updateOne(
-        { _id: this.toObjectId(id) },
+        { _id: id },
         { deleted: true },
         err => {
           if (err) {
@@ -70,7 +70,7 @@ export class RoleService {
   async active(id: string): Promise<IRole> {
     return await new Promise((resolve, reject) => {
       this.$model.updateOne(
-        { _id: this.toObjectId(id) },
+        { _id: id },
         { active: true },
         err => {
           if (err) {
