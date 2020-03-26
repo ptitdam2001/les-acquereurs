@@ -25,10 +25,16 @@ function* createOrUpdate(action: any) {
   yield fetchUsers()
 }
 
+function* removeOne(action: any) {
+  yield call(service.remove, action.user)
+  yield fetchUsers()
+}
+
 function* actionWatcher() {
   yield takeLatest(userTypes.FETCH_ALL, fetchUsers)
   yield takeEvery(userTypes.FETCH_ONE, fetchOneuser)
   yield takeEvery(userTypes.ADD_OR_UPDATE, createOrUpdate)
+  yield takeLatest(userTypes.REMOVE_ONE, removeOne)
 }
 
 export default function* userSaga() {

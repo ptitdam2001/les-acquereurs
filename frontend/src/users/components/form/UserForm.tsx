@@ -11,6 +11,7 @@ import { createOrUpdate } from '../../redux/actions/users'
 import { ICompany } from '../../../companies/models/Company'
 import { IRole } from '../../../roles/models/Role'
 import { RoleSelector } from '../../../roles/components'
+import { CompanySelector } from '../../../companies/components'
 
 const useStyles = makeStyles(styles)
 
@@ -55,6 +56,10 @@ export const UserForm: React.FC<UserFormProps> = (props: UserFormProps) => {
     formik.setFieldValue('role', role)
   }
 
+  const handleSelectCompany = (company: ICompany | undefined) => {
+    formik.setFieldValue('company', company)
+  }
+
   useEffect(() => {
     formik.setValues(user || defaultVal)
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -77,6 +82,8 @@ export const UserForm: React.FC<UserFormProps> = (props: UserFormProps) => {
 
         <TextField id="job" label="Job" value={formik.values.job} onChange={formik.handleChange} onBlur={formik.handleBlur} margin="normal" />
         {formik.errors.job ? <div>{formik.errors.job}</div> : null}
+
+        <CompanySelector value={formik.values.company} onSelect={handleSelectCompany} />
 
         <RoleSelector value={formik.values.role} onSelect={handleSelectRole} />
 
