@@ -3,8 +3,8 @@ import { createStore, applyMiddleware, combineReducers, compose } from 'redux'
 import { devToolsEnhancer } from 'redux-devtools-extension'
 import createSagaMiddleware from 'redux-saga'
 
-import companyReducers from '../companies/reducer'
-import houseReducer from '../houses/reducer'
+import { companyReducer } from '../companies'
+import { houseReducer } from '../houses'
 import coreReducers from '../core/reducer'
 import roleReducers from '../roles/reducer'
 import userReducers from '../users/reducer'
@@ -18,7 +18,7 @@ import userSaga from '../users/redux/sagas'
 const sagaMiddleware = createSagaMiddleware()
 
 const rootReducer = combineReducers({
-  companies: companyReducers,
+  companies: companyReducer,
   houses: houseReducer,
   roles: roleReducers,
   users: userReducers,
