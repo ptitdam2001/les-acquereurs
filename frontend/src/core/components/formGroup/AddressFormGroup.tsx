@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react'
 import { makeStyles } from '@material-ui/styles'
 import { TextField, FormGroup, Box, FormControl, InputLabel, Select, MenuItem, Avatar } from '@material-ui/core'
 import { useDispatch, useSelector } from 'react-redux'
+import { useTranslation } from 'react-i18next'
+
 import { IAddress, Address } from '../../models/Address'
 import styles from './AddressFormGroup.style'
 import { fetchCountries } from '../../redux/actions/countries'
@@ -19,6 +21,7 @@ type AddressFormGroupProps = {
 
 export const AddressFormGroup: React.FC<AddressFormGroupProps> = (props: AddressFormGroupProps) => {
   const classes = useStyles()
+  const { t } = useTranslation()
   const dispatch = useDispatch()
   const countryList = useSelector((state: RootState) => {
     const { countries } = state.countries
@@ -47,7 +50,7 @@ export const AddressFormGroup: React.FC<AddressFormGroupProps> = (props: Address
     <FormGroup>
       <TextField
         id="way1"
-        label="Way 1"
+        label={t('address.way1')}
         value={state.way1 ? state.way1 : ''}
         onChange={(e) => handleChange('way1', e.target.value)}
         // onBlur={handleBlur}
@@ -56,7 +59,7 @@ export const AddressFormGroup: React.FC<AddressFormGroupProps> = (props: Address
 
       <TextField
         id="way2"
-        label="Way 2"
+        label={t('address.way2')}
         value={state.way2 ? state.way2 : ''}
         onChange={(e) => handleChange('way2', e.target.value)}
         // onBlur={handleBlur}
@@ -65,7 +68,7 @@ export const AddressFormGroup: React.FC<AddressFormGroupProps> = (props: Address
 
       <TextField
         id="way3"
-        label="Way 3"
+        label={t('address.way3')}
         value={state.way3 ? state.way3 : ''}
         onChange={(e) => handleChange('way3', e.target.value)}
         // onBlur={handleBlur}
@@ -75,7 +78,7 @@ export const AddressFormGroup: React.FC<AddressFormGroupProps> = (props: Address
       <Box display="flex" flexDirection="row">
         <TextField
           id="postalCode"
-          label="Postal code"
+          label={t('address.postalcode')}
           value={state.postalCode ? state.postalCode : ''}
           onChange={(e) => handleChange('postalCode', e.target.value)}
           // onBlur={handleBlur}
@@ -84,7 +87,7 @@ export const AddressFormGroup: React.FC<AddressFormGroupProps> = (props: Address
 
         <TextField
           id="city"
-          label="City"
+          label={t('address.city')}
           value={state.city ? state.city : ''}
           onChange={(e) => handleChange('city', e.target.value)}
           // onBlur={handleBlur}
@@ -92,7 +95,7 @@ export const AddressFormGroup: React.FC<AddressFormGroupProps> = (props: Address
         />
 
         <FormControl fullWidth margin="dense">
-          <InputLabel htmlFor="address-country">Country</InputLabel>
+          <InputLabel htmlFor="address-country">{t('address.country')}</InputLabel>
           <Select value={state.country ? state.country.toUpperCase() : ''} onChange={(e) => handleChange('country', e.target.value)} inputProps={{ name: 'country', id: 'address-country' }}>
             {countryList.map((country: ICountry) => (
               <MenuItem value={country.alpha2Code} key={country.alpha2Code}>

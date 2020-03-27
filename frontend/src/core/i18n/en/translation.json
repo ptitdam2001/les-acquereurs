@@ -1,0 +1,10 @@
+{
+	"address": {
+		"way1": "Way 1",
+		"way2": "Way 2",
+		"way3": "Way 3",
+		"postalcode": "Postal Code",
+		"city": "City",
+		"country": "Country"
+	}
+}

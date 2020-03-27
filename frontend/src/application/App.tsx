@@ -2,6 +2,10 @@ import React from 'react'
 import { Provider } from 'react-redux'
 import { ThemeProvider } from '@material-ui/styles'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+
+// Configure translation
+import '../core/i18n'
+
 import { store } from './store'
 import { theme } from './theme'
 
