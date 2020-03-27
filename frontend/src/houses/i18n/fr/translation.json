@@ -1,3 +1,11 @@
 {
-	"title": "Maisons"
+	"title": "Maisons",
+	"list": {
+		"type": "Type",
+		"title": "Titre",
+		"roomNumber": "Nbre de pièces",
+		"address" : "Adresse",
+		"creation" : "Date de création",
+		"active": "Activé"
+	}
 }
