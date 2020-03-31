@@ -6,11 +6,11 @@ import { IUser } from '../../users/models/User'
 export interface IHouse {
   _id?: string
   title: string
-  comments: string
+  comment: string
   address: IAddress
   type: string
   rooms: IRoom[]
-  globalArea?: number
+  globalArea: number
   insideArea: number
   carPack: boolean
   carparkArea?: number

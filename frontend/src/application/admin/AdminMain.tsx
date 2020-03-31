@@ -50,7 +50,7 @@ export const AdminMain: React.FC = () => {
         <Box flex={1 / 4} display="flex" flexDirection="column" boxShadow={2} p={1}>
           <AdminMenu menu={menus} />
         </Box>
-        <Box flex={1}>
+        <Box flex={1} display="flex" flexDirection="column">
           <Switch>
             {routes(menus)}
             <Route component={AdminHome} />

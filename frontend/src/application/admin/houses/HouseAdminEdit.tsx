@@ -44,7 +44,7 @@ export const HouseAdminEdit: React.FC = () => {
           </Typography>
         </Toolbar>
       </AppBar>
-      <Box p={3} justifyItems="center">
+      <Box flex={1} display="flex" flexDirection="column" justifyItems="center">
         <HouseForm house={house} onSave={onSave} />
       </Box>
     </>

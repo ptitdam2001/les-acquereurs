@@ -8,5 +8,13 @@
 			}
 		},
 		"defaultLang": "en"
+	},
+	"houseTypes": {
+		"values": [
+			"house",
+			"appartment",
+			"loft",
+			"area"
+		]
 	}
 }

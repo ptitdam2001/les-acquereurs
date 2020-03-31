@@ -7,5 +7,31 @@
 		"address" : "Adresse",
 		"creation" : "Date de création",
 		"active": "Activé"
+	},
+	"form": {
+		"menu": {
+			"general": "Général",
+			"rooms": "Pièces",
+			"address": "Adresse",
+			"other": "Autres",
+			"media": "Média"
+		},
+		"general": {
+			"type":"Type",
+			"title":"Enoncé",
+			"comment": "Description",
+			"globalArea": "Surface global",
+			"insideArea": "Surface habitable",
+			"price": "Prix",
+			"loaned": "Loué",
+			"furnished": "Meublé",
+			"active": "Active"
+		}
+	},
+	"types": {
+		"house": "Maison",
+		"appartment": "Appartement",
+		"loft": "Loft",
+		"area": "Parcelle"
 	}
 }

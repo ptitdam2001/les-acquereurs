@@ -6,5 +6,8 @@
 		"postalcode": "Code Postal",
 		"city": "Ville",
 		"country": "Pays"
+	},
+	"actions": {
+		"save": "Sauvegarder"
 	}
 }

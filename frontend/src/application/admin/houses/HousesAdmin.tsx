@@ -8,8 +8,8 @@ export const HousesAdmin: React.FC = () => {
   const match = useRouteMatch()
   return (
     <Switch>
-      <Route path={`${match.url}/:id/edit`} exact component={HouseAdminEdit} />
-      <Route path={`${match.url}/add`} exact component={HouseAdminEdit} />
+      <Route path={`${match.url}/:id/edit`} component={HouseAdminEdit} />
+      <Route path={`${match.url}/add`} component={HouseAdminEdit} />
       <Route component={HousesAdminList} />
     </Switch>
   )

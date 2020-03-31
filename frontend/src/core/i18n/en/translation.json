@@ -6,5 +6,8 @@
 		"postalcode": "Postal Code",
 		"city": "City",
 		"country": "Country"
+	},
+	"actions": {
+		"save": "Save"
 	}
 }
