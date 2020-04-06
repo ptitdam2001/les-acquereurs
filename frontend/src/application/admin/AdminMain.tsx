@@ -12,26 +12,11 @@ import { AdminMenu } from './menu/AdminMenu'
 
 const routes = (menus: any[]): any[] => {
   const output: any[] = []
-  menus.forEach(menu => {
+  menus.forEach((menu) => {
     if (menu.submenu) {
-      menu.submenu.forEach(
-        (submenu: { to: string; component: any; label: string }) =>
-          output.push(
-            <Route
-              path={submenu.to}
-              component={submenu.component}
-              key={`route-${submenu.label}`}
-            />
-          )
-      )
+      menu.submenu.forEach((submenu: { to: string; component: any; label: string }) => output.push(<Route path={submenu.to} component={submenu.component} key={`route-${submenu.label}`} />))
     } else {
-      output.push(
-        <Route
-          path={menu.to}
-          component={menu.component}
-          key={`route-${menu.label}`}
-        />
-      )
+      output.push(<Route path={menu.to} component={menu.component} key={`route-${menu.label}`} />)
     }
   })
   return output
@@ -62,16 +47,10 @@ export const AdminMain: React.FC = () => {
         </Toolbar>
       </AppBar>
       <Box display="flex" flex={1} flexDirection="row">
-        <Box
-          flex={1 / 4}
-          display="flex"
-          flexDirection="column"
-          boxShadow={2}
-          p={1}
-        >
+        <Box flex={1 / 4} display="flex" flexDirection="column" boxShadow={2} p={1}>
           <AdminMenu menu={menus} />
         </Box>
-        <Box flex={1}>
+        <Box flex={1} display="flex" flexDirection="column">
           <Switch>
             {routes(menus)}
             <Route component={AdminHome} />

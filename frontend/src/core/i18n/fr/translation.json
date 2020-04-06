@@ -1,0 +1,13 @@
+{
+	"address": {
+		"way1": "Rue 1",
+		"way2": "Rue 2",
+		"way3": "Rue 3",
+		"postalcode": "Code Postal",
+		"city": "Ville",
+		"country": "Pays"
+	},
+	"actions": {
+		"save": "Sauvegarder"
+	}
+}

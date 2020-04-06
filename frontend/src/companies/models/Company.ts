@@ -1,4 +1,3 @@
-
 import { IAddress, ICoordinates } from '../../core/models/Address'
 
 export interface ICompany {
@@ -42,7 +41,7 @@ export default {
 export class Company {
   private entity: ICompany
 
-  constructor(company:ICompany) {
+  constructor(company: ICompany) {
     this.entity = company
   }
 

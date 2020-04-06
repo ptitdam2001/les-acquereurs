@@ -1,32 +1,24 @@
 import React from 'react'
 
 import { AppBar, Toolbar, IconButton, Typography, Box } from '@material-ui/core'
-
-// import BackIcon from '@material-ui/icons/ChevronLeft';
 import PlusIcon from '@material-ui/icons/Add'
 
 import { useRouteMatch, Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+
 import { CompaniesList } from '../../../companies/components'
 
 export const CompanyAdminList: React.FC = () => {
   const match = useRouteMatch()
+  const { t } = useTranslation()
   return (
     <>
       <AppBar position="static">
         <Toolbar>
-          {/* <IconButton component={Link} to="/admin" edge="start" color="inherit" aria-label="Back">
-            <BackIcon />
-          </IconButton> */}
           <Typography variant="h6" style={{ flexGrow: 1 }}>
-            Companies
+            {t('company:title')}
           </Typography>
-          <IconButton
-            component={Link}
-            to={`${match.url}/add`}
-            edge="start"
-            color="inherit"
-            aria-label="Add"
-          >
+          <IconButton component={Link} to={`${match.url}/add`} edge="start" color="inherit" aria-label="Add">
             <PlusIcon />
           </IconButton>
         </Toolbar>

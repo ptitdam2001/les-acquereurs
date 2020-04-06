@@ -1,18 +1,11 @@
 import React, { useEffect } from 'react'
-import {
-  Table,
-  TableHead,
-  TableRow,
-  TableCell,
-  TableBody,
-  Box,
-} from '@material-ui/core'
+import { Table, TableHead, TableRow, TableCell, TableBody, Box } from '@material-ui/core'
 
 import { makeStyles } from '@material-ui/styles'
+import { useDispatch, useSelector } from 'react-redux'
 import { fetchRoles } from '../../redux/actions/roles'
 import { RoleListItem } from './RoleListItem'
 import styles from './RolesList.style'
-import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../../../application/store'
 import { IRole } from '../../models/Role'
 
@@ -21,14 +14,14 @@ const useStyle = makeStyles(styles)
 export const RolesList = () => {
   const classes = useStyle()
   const dispatch = useDispatch()
-  const roles = useSelector((state: RootState) => {
+  const roleList = useSelector((state: RootState) => {
     const { roles } = state
     return roles.list
   })
 
   useEffect(() => {
     dispatch(fetchRoles())
-  }, [])
+  }, [dispatch])
 
   return (
     <Box p={1}>
@@ -44,7 +37,9 @@ export const RolesList = () => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {roles.map((row: IRole) => <RoleListItem role={row} key={row._id} />)}
+          {roleList.map((row: IRole) => (
+            <RoleListItem role={row} key={row._id} />
+          ))}
         </TableBody>
       </Table>
     </Box>

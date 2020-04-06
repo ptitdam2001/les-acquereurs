@@ -1,6 +1,6 @@
-import { IUser } from './../../models/User';
-import { UsersState } from './../system/users';
-import { UsersActionTypes } from './../types/users';
+import { IUser } from '../../models/User'
+import { UsersState } from '../system/users'
+import { UsersActionTypes } from '../types/users'
 import * as userTypes from '../types/users'
 
 const defaultState: UsersState = {
@@ -16,15 +16,16 @@ export default (state = defaultState, action: UsersActionTypes): UsersState => {
       const { docs, totalDocs, totalPages } = action.users
       return {
         ...state,
-        list: docs.map((role: any) => (role as IUser)),
+        list: docs.map((role: any) => role as IUser),
         total: totalDocs,
         pages: totalPages,
       }
     }
 
-    case userTypes.SET_CURRENT:
+    case userTypes.SET_CURRENT: {
       const newData = { current: action.user }
       return { ...state, ...newData }
+    }
 
     case userTypes.RESET_CURRENT:
       return {

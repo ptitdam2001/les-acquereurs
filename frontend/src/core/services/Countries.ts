@@ -34,7 +34,7 @@ export class CountryService {
   }
 
   static getAll(): Promise<ICountry[]> {
-    return API.get(`${CountryService.uri}`).then((list: any) => list.data.map((country: any) => (country as ICountry)))
+    return API.get(`${CountryService.uri}`).then((list: any) => list.data.map((country: any) => country as ICountry))
   }
 
   static searchByName(name: string, fullText = false) {

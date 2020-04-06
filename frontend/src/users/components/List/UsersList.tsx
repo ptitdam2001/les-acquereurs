@@ -1,12 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import {
-  Table,
-  TableHead,
-  TableRow,
-  TableCell,
-  TableBody,
-} from '@material-ui/core'
+import { Table, TableHead, TableRow, TableCell, TableBody } from '@material-ui/core'
 
 import { makeStyles } from '@material-ui/styles'
 import { fetchUsers } from '../../redux/actions/users'
@@ -21,14 +15,14 @@ const useStyles = makeStyles(styles)
 export const UsersList: React.FC = () => {
   const classes = useStyles()
   const dispatch = useDispatch()
-  const users = useSelector((state: RootState) => {
+  const userList = useSelector((state: RootState) => {
     const { users } = state
     return users.list
   })
 
   useEffect(() => {
     dispatch(fetchUsers())
-  }, [])
+  }, [dispatch])
 
   return (
     <Table className={classes.table} size="small">
@@ -44,7 +38,9 @@ export const UsersList: React.FC = () => {
         </TableRow>
       </TableHead>
       <TableBody>
-        {users.map((user: IUser) => <UsersListItem user={user} key={user._id} />)}
+        {userList.map((user: IUser) => (
+          <UsersListItem user={user} key={user._id} />
+        ))}
       </TableBody>
     </Table>
   )

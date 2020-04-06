@@ -1,8 +1,8 @@
-import { IHouse } from '../../models/House';
+import { IHouse } from '../../models/House'
 
 export interface HousesState {
-	list: IHouse[]
+  list: IHouse[]
   total: number
   pages: number
-	current?: IHouse
+  current?: IHouse
 }

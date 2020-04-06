@@ -29,7 +29,7 @@ export const AdminMenu: React.FC<AdminMenuProps> = (props: AdminMenuProps) => {
 
   return (
     <List aria-labelledby="admin-menu" className={classes.root}>
-      {menu.map(item => (
+      {menu.map((item) => (
         <Fragment key={item.label}>
           {!item.submenu ? (
             <ListItem button component={item.type} to={item.to}>
@@ -46,16 +46,8 @@ export const AdminMenu: React.FC<AdminMenuProps> = (props: AdminMenuProps) => {
               <Collapse in={open} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
                   {item.submenu.map((sub: any) => (
-                    <ListItem
-                      button
-                      component={sub.type}
-                      to={sub.to}
-                      className={classes.nested}
-                      key={sub.label}
-                    >
-                      {sub.icon ? (
-                        <ListItemIcon>{sub.icon}</ListItemIcon>
-                      ) : null}
+                    <ListItem button component={sub.type} to={sub.to} className={classes.nested} key={sub.label}>
+                      {sub.icon ? <ListItemIcon>{sub.icon}</ListItemIcon> : null}
                       <ListItemText primary={sub.label} />
                     </ListItem>
                   ))}

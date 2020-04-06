@@ -1,0 +1,20 @@
+{
+	"application": {
+		"lang": {
+			"lng": "en",
+			"fallbackLng": "en",
+			"interpolation": {
+				"escapeValue": false
+			}
+		},
+		"defaultLang": "en"
+	},
+	"houseTypes": {
+		"values": [
+			"house",
+			"appartment",
+			"loft",
+			"area"
+		]
+	}
+}

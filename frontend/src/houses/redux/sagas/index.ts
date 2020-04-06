@@ -15,8 +15,7 @@ function* fetchOneHouse(action: any) {
   try {
     const house = yield call(service.getOne, action.houseId)
     yield put(setCurrent(house))
-  }
-  catch(error) {
+  } catch (error) {
     yield put(resetCurrent())
   }
 }
