@@ -5,10 +5,10 @@ import { Link, useParams, useHistory } from 'react-router-dom'
 import BackIcon from '@material-ui/icons/ChevronLeft'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { RootState } from '../../store'
 import { fetchHouse, resetCurrent } from '../../../houses/redux/actions/houses'
 import { HouseForm } from '../../../houses/components'
 import { IHouse } from '../../../houses/models/House'
+import { getCurrentHouse } from '../../../houses/redux/selectors/houses'
 
 export const HouseAdminEdit: React.FC = () => {
   const { id } = useParams()
@@ -25,12 +25,12 @@ export const HouseAdminEdit: React.FC = () => {
     } else {
       dispatch(resetCurrent())
     }
+    return () => {
+      dispatch(resetCurrent())
+    }
   }, [dispatch, id])
 
-  const house: IHouse | undefined = useSelector((state: RootState) => {
-    const { current } = state.houses
-    return current
-  })
+  const house: IHouse | undefined = useSelector(getCurrentHouse)
 
   return (
     <>

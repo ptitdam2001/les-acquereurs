@@ -1,7 +1,7 @@
-import i18n from 'i18next'
+import { I18Provider as i18n } from '../../core/i18n'
 
 import ENTranslation from './en/translation.json'
 import FRTranslation from './fr/translation.json'
 
-i18n.addResources('en', 'house', ENTranslation)
-i18n.addResources('fr', 'house', FRTranslation)
+i18n.addResourceBundle('en', 'house', ENTranslation)
+i18n.addResourceBundle('fr', 'house', FRTranslation)

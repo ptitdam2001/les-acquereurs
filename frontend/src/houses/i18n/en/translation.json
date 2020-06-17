@@ -8,14 +8,14 @@
 		"creation" : "Creation Date",
 		"active": "Active"
 	},
+	"menu": {
+		"general": "General",
+		"rooms": "Rooms",
+		"address": "Address",
+		"other": "Other",
+		"media": "Media"
+	},
 	"form": {
-		"menu": {
-			"general": "General",
-			"rooms": "Rooms",
-			"address": "Address",
-			"other": "Other",
-			"media": "Media"
-		},
 		"general": {
 			"type":"Type",
 			"title":"Title",

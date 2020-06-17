@@ -8,6 +8,7 @@
 		"country": "Country"
 	},
 	"actions": {
-		"save": "Save"
+		"save": "Save",
+		"validate": "Validate"
 	}
 }

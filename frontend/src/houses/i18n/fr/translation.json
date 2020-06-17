@@ -8,14 +8,14 @@
 		"creation" : "Date de création",
 		"active": "Activé"
 	},
+	"menu": {
+		"general": "Général",
+		"rooms": "Pièces",
+		"address": "Adresse",
+		"other": "Autres",
+		"media": "Média"
+	},
 	"form": {
-		"menu": {
-			"general": "Général",
-			"rooms": "Pièces",
-			"address": "Adresse",
-			"other": "Autres",
-			"media": "Média"
-		},
 		"general": {
 			"type":"Type",
 			"title":"Enoncé",

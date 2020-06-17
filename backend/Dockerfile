@@ -4,8 +4,10 @@ ENV NODE_ENV production
 
 WORKDIR /usr/src/app
 
-COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
-RUN yarn add webpack webpack-cli -g && yarn install --production=false --silent
 COPY . .
+RUN yarn install --production=false --silent
+RUN yarn build
+# RUN rm -Rf node_modules
+
 EXPOSE 8888
 CMD yarn start:prod

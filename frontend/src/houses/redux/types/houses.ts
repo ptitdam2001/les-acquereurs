@@ -1,3 +1,4 @@
+import { IActionResult } from './../../../core/models/IActionResult';
 import { HTTPListResponseType } from '../../../core/models/HTTPResponseType'
 import { IHouse } from '../../models/House'
 
@@ -11,6 +12,10 @@ export const RESET_CURRENT = 'HOUSES_RESET_CURRENT'
 
 export const ADD_OR_UPDATE = 'HOUSES_ADD_OR_UPDATE'
 export const REMOVE_ONE = 'HOUSES_REMOVE'
+
+export const TOGGLE_IS_LOADING = 'HOUSES_TOGGLE_IS_LOADING';
+
+export const SET_LAST_ACTION = 'HOUSES_SET_LAST_ACTION';
 
 interface FetchHousesAction {
   type: typeof FETCH_ALL
@@ -45,4 +50,15 @@ interface CreateOrUpdateAction {
   house: IHouse
 }
 
-export type HousesActionTypes = FetchHousesAction | FetchHouseAction | SetHousesAction | SetHouseAction | ResetCurrentAction | RemoveOneAction | CreateOrUpdateAction
+interface ToggleIsLoading {
+  type: typeof TOGGLE_IS_LOADING
+  value: boolean
+}
+
+interface SetLastAction {
+  type: typeof SET_LAST_ACTION
+  value: IActionResult | undefined
+}
+
+export type HousesActionTypes = FetchHousesAction | FetchHouseAction | SetHousesAction | SetHouseAction
+  | ResetCurrentAction | RemoveOneAction | CreateOrUpdateAction | ToggleIsLoading | SetLastAction

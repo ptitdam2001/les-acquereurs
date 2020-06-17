@@ -1,5 +1,6 @@
+import { IActionResult } from './../../../core/models/IActionResult';
 import { IHouse } from '../../models/House'
-import { FETCH_ALL, FETCH_ONE, SET_ALL, SET_CURRENT, RESET_CURRENT, HousesActionTypes, REMOVE_ONE, ADD_OR_UPDATE } from '../types/houses'
+import { FETCH_ALL, FETCH_ONE, SET_ALL, SET_CURRENT, RESET_CURRENT, HousesActionTypes, REMOVE_ONE, ADD_OR_UPDATE, TOGGLE_IS_LOADING, SET_LAST_ACTION } from '../types/houses'
 import { HTTPListResponseType } from '../../../core/models/HTTPResponseType'
 
 export function fetchHouses(): HousesActionTypes {
@@ -41,5 +42,26 @@ export function createOrUpdate(house: IHouse): HousesActionTypes {
   return {
     type: ADD_OR_UPDATE,
     house,
+  }
+}
+
+export function toggleIsLoading(value: boolean): HousesActionTypes {
+  return {
+    type: TOGGLE_IS_LOADING,
+    value
+  }
+}
+
+export function setLastAction(value: IActionResult): HousesActionTypes {
+  return {
+    type: SET_LAST_ACTION,
+    value
+  }
+}
+
+export function resetLastAction(): HousesActionTypes {
+  return {
+    type: SET_LAST_ACTION,
+    value: undefined,
   }
 }

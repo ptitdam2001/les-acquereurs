@@ -1,3 +1,4 @@
+import { IActionResult } from './../../../core/models/IActionResult';
 import { IHouse } from '../../models/House'
 
 export interface HousesState {
@@ -5,4 +6,6 @@ export interface HousesState {
   total: number
   pages: number
   current?: IHouse
+  lastAction?: IActionResult
+  isLoading: boolean
 }

@@ -7,12 +7,14 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import '../core/i18n'
 
 import { store } from './store'
-import { theme } from './theme'
 
 import { FrontMain } from './front/FrontMain'
 import { AdminMain } from './admin/AdminMain'
 
+import setupTheme from '../setupTheme'
+
 const App: React.FC = () => {
+  const theme = setupTheme(1)
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>

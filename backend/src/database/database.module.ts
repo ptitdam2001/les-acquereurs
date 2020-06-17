@@ -3,9 +3,11 @@ import { Module } from '@nestjs/common';
 
 import * as config from 'config';
 
-const mongoServer = `${config.get('db.host')}:${config.get(
-  'db.port',
-)}/${config.get('db.database')}`;
+console.log('______', process.env)
+
+const dbHostname = process.env.MONGO_SERVER || config.get('db.host')
+
+const mongoServer = `${config.get('db.protocol')}://${dbHostname}/${config.get('db.database')}`;
 const mongoConfig = {
   useNewUrlParser: true,
   autoIndex: true, // process.env.NODE_ENV === 'test' ? true : false, // Don't build indexes

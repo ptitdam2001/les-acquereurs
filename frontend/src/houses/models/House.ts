@@ -33,3 +33,15 @@ export interface IHouse {
   active: boolean
   deleted: boolean
 }
+
+export const getNewHouse = () => {
+  const price = {
+    price: 0,
+    notary_fees: 0,
+    commission: 0,
+    history: [],
+  } as IPrice
+  const loaned = false
+  const active = true
+  return { price, loaned, active } as IHouse
+}

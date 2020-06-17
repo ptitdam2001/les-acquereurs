@@ -22,6 +22,6 @@ const i18NextInit = {
   },
 }
 
-export const I18Provider = i18n
-  .use(initReactI18next) // passes i18n down to react-i18next
-  .init(i18NextInit)
+export const I18Provider = i18n.use(initReactI18next) // passes i18n down to react-i18next
+
+I18Provider.init(i18NextInit)

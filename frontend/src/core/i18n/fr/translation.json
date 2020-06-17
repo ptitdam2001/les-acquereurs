@@ -8,6 +8,7 @@
 		"country": "Pays"
 	},
 	"actions": {
-		"save": "Sauvegarder"
+		"save": "Sauvegarder",
+		"validate": "Valider"
 	}
 }
