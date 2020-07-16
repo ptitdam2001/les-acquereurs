@@ -26,7 +26,7 @@ export const FrontMain: React.FC = () => {
             Les acquereurs
           </Typography>
           <IconButton component={Link} to="/admin" aria-label="backoffice" title="backoffice">
-            <FontAwesomeIcon icon={faServer} size="2x" />
+            <FontAwesomeIcon icon={faServer} size="lg" />
           </IconButton>
         </Toolbar>
       </AppBar>

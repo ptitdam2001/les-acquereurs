@@ -42,7 +42,7 @@ export const AdminMain: React.FC = () => {
             BackOffice
           </Typography>
           <Button component={Link} to="/">
-            <FontAwesomeIcon icon={faHome} size="2x" />
+            <FontAwesomeIcon icon={faHome} size="lg" />
           </Button>
         </Toolbar>
       </AppBar>
