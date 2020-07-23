@@ -1,5 +1,6 @@
-import { CountriesActionTypes, SET_ALL, GET_ALL } from '../types/countries'
-import { ICountry } from '../../models/Country'
+import { CountriesActionTypes } from './countries.types'
+import { SET_ALL, GET_ALL } from './countries.constant'
+import { ICountry } from './countries.interface'
 
 export function setCountries(countries: ICountry[]): CountriesActionTypes {
   return { type: SET_ALL, countries }

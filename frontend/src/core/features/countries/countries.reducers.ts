@@ -1,6 +1,6 @@
-import { CountriesActionTypes, SET_ALL } from '../types/countries'
-
-import { CountriesState } from '../system/countries'
+import { CountriesActionTypes } from './countries.types'
+import { SET_ALL } from './countries.constant'
+import { CountriesState } from './countries.interface'
 
 const defaultState: CountriesState = {
   countries: [],

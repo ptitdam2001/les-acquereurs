@@ -10,7 +10,7 @@ import roleReducers from '../roles/reducer'
 import userReducers from '../users/reducer'
 
 import companySaga from '../companies/features/companies.saga'
-import coreSaga from '../core/redux/sagas'
+import coreSaga from '../core/features/countries/countries.saga'
 import houseSaga from '../houses/redux/sagas'
 import roleSaga from '../roles/redux/sagas'
 import userSaga from '../users/redux/sagas'

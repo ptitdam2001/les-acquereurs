@@ -1,8 +1,5 @@
-import { ICountry } from '../../models/Country'
-
-export const GET_ALL = 'COUNTRIES_GET_ALL'
-export const SET_ALL = 'COUNTRIES_SET_COUNTRIES'
-export const GET_ONE = 'COUNTRIES_GET_ONE'
+import { SET_ALL, GET_ALL } from './countries.constant'
+import { ICountry } from './countries.interface'
 
 interface SetCountriesAction {
   type: typeof SET_ALL
