@@ -1,8 +1,9 @@
 import { AxiosResponse } from 'axios'
-import { ICompany } from '../models/Company'
+
 import API from '../../core/services/Api'
 import { HTTPListResponseType } from '../../core/models/HTTPResponseType'
 import { CoreService } from '../../core/services/Core'
+import { ICompany } from './companies.interface'
 
 export class CompaniesService implements CoreService<ICompany> {
   static uri = `companies`

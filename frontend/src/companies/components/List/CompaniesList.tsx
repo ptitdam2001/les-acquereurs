@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Table, TableHead, TableRow, TableCell, TableBody, IconButton, Box } from '@material-ui/core'
@@ -8,10 +9,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash, faEdit, faCheckCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 
 import { useRouteMatch, Link } from 'react-router-dom'
-import { fetchCompanies, removeOne } from '../../redux/actions/companies'
+import { fetchCompanies, removeOne, ICompany } from '../../features'
 
 import styles from './CompaniesList.style'
-import { ICompany } from '../../models/Company'
+
 import { RootState } from '../../../application/store'
 import { IAddress } from '../../../core/models/Address'
 import { Address } from '../../../core/components'
@@ -30,7 +31,6 @@ export const CompaniesList: React.FC = () => {
   const remove = (company: ICompany) => {
     return async () => {
       // eslint-disable-next-line no-alert
-      // eslint-disable-next-line no-restricted-globals
       const confirmation = confirm(`Do you really want to remove it? ${company.name}`)
       if (confirmation) {
         await dispatch(removeOne(company))
@@ -56,6 +56,7 @@ export const CompaniesList: React.FC = () => {
       </TableHead>
       <TableBody>
         {companies.map((row: ICompany) => {
+          // eslint-disable-next-line @typescript-eslint/naming-convention
           const { active, address = {} as IAddress, createdAt, name, shortname, _id } = row
 
           return (

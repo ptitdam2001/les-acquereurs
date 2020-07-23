@@ -5,11 +5,10 @@ import { makeStyles } from '@material-ui/styles'
 import { TextField, Switch, Button, Box, FormControlLabel } from '@material-ui/core'
 import { useFormik } from 'formik'
 import { useDispatch } from 'react-redux'
-import styles from './CompaniesForm.style'
+import styles from './CompanyForm.style'
 import { AddressFormGroup } from '../../../core/components'
 import { IAddress } from '../../../core/models/Address'
-import { ICompany } from '../../models/Company'
-import { createOrUpdate } from '../../redux/actions/companies'
+import { createOrUpdate, ICompany } from '../../features'
 
 const useStyles = makeStyles(styles)
 
@@ -43,8 +42,7 @@ export const CompanyForm: React.FC<CompanyFormProps> = (props: CompanyFormProps)
 
   useEffect(() => {
     formik.setValues(company || defaultVal)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [company])
+  }, [company, formik])
 
   const handleChangeActive = (event: React.ChangeEvent<HTMLInputElement>) => {
     setActive(event.target.checked)

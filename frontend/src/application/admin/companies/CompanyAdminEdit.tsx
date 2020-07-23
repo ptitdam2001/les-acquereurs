@@ -5,8 +5,7 @@ import { Link, useParams, useHistory } from 'react-router-dom'
 import BackIcon from '@material-ui/icons/ChevronLeft'
 import { useDispatch, useSelector } from 'react-redux'
 import { CompanyForm } from '../../../companies/components'
-import { fetchCompany, resetCurrent } from '../../../companies/redux/actions/companies'
-import { ICompany } from '../../../companies/models/Company'
+import { fetchCompany, resetCurrent, ICompany } from '../../../companies/features'
 import { RootState } from '../../store'
 
 export const CompanyAdminEdit: React.FC = () => {

@@ -23,29 +23,9 @@ export interface DBCompanies {
   prevPage?: number
   nextPage?: number
 }
-
-export default {
-  name: '',
-  shortname: '',
-  address: {
-    way1: '',
-    way2: '',
-    way3: '',
-    postalCode: '',
-    city: '',
-    country: '',
-  },
-  active: true,
-}
-
-export class Company {
-  private entity: ICompany
-
-  constructor(company: ICompany) {
-    this.entity = company
-  }
-
-  public get() {
-    return this.entity
-  }
+export interface CompaniesState {
+  list: ICompany[]
+  total: number
+  pages: number
+  current?: ICompany
 }
