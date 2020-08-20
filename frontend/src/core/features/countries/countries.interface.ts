@@ -44,3 +44,7 @@ export interface ICountry {
   regionalBlocs: IRegionalBlock[]
   cioc: string
 }
+
+export interface CountriesState {
+  countries: ICountry[]
+}

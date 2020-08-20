@@ -1,8 +1,8 @@
 import { put, takeLatest, call, all } from 'redux-saga/effects'
 
-import * as CountriesTypes from '../types/countries'
-import { CountryService } from '../../services/Countries'
-import { setCountries } from '../actions/countries'
+import * as CountriesTypes from './countries.constant'
+import { CountryService } from './countries.service'
+import { setCountries } from './countries.actions'
 
 function* fetchCountries() {
   const countries = yield call(CountryService.getAll)

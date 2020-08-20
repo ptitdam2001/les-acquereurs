@@ -1,7 +1,6 @@
-import { CompaniesState } from '../system/companies'
-import { CompaniesActionTypes } from '../types/companies'
-import { ICompany } from '../../models/Company'
-import * as companyTypes from '../types/companies'
+import { CompaniesActionTypes } from './companies.types'
+import * as companyTypes from './companies.constant'
+import { CompaniesState, ICompany } from './companies.interface'
 
 const defaultState: CompaniesState = {
   list: [],

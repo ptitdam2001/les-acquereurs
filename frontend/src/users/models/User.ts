@@ -1,5 +1,5 @@
 import { IRole } from '../../roles/models/Role'
-import { ICompany } from '../../companies/models/Company'
+import { ICompany } from '../../companies/features'
 
 export interface IUser {
   createdAt: string

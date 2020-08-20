@@ -7,8 +7,7 @@ import { useTranslation } from 'react-i18next'
 
 import { IAddress, Address } from '../../models/Address'
 import styles from './AddressFormGroup.style'
-import { fetchCountries } from '../../redux/actions/countries'
-import { ICountry } from '../../models/Country'
+import { fetchCountries, ICountry } from '../../features/countries'
 import { RootState } from '../../../application/store'
 
 const useStyles = makeStyles(styles)

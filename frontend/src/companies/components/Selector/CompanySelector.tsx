@@ -2,8 +2,7 @@ import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { FormControl, InputLabel, Select, MenuItem } from '@material-ui/core'
 import { RootState } from '../../../application/store'
-import { ICompany } from '../../models/Company'
-import { fetchCompanies } from '../../redux/actions/companies'
+import { fetchCompanies, ICompany } from '../../features'
 
 type CompanySelectorProps = {
   onSelect: (role: ICompany | undefined) => any

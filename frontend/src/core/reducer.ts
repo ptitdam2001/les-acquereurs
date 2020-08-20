@@ -1,4 +1,4 @@
-import countries from './redux/reducers/countries'
+import countries from './features/countries/countries.reducers'
 
 export default {
   countries,

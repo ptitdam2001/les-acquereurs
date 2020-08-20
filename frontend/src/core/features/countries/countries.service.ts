@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { ICountry } from '../models/Country'
+import { ICountry } from './countries.interface'
 
 const API = axios.create({
   baseURL: 'https://restcountries.eu/rest/v2/',

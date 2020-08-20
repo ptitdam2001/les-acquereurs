@@ -8,10 +8,10 @@ import { IUser } from '../../models/User'
 
 import styles from './UserForm.style'
 import { createOrUpdate } from '../../redux/actions/users'
-import { ICompany } from '../../../companies/models/Company'
 import { IRole } from '../../../roles/models/Role'
 import { RoleSelector } from '../../../roles/components'
 import { CompanySelector } from '../../../companies/components'
+import { ICompany } from '../../../companies/features'
 
 const useStyles = makeStyles(styles)
 
@@ -62,7 +62,6 @@ export const UserForm: React.FC<UserFormProps> = (props: UserFormProps) => {
 
   useEffect(() => {
     formik.setValues(user || defaultVal)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user])
 
   return (

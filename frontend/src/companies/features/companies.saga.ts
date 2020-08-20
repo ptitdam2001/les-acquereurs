@@ -1,8 +1,8 @@
 import { put, takeLatest, takeEvery, call, all } from 'redux-saga/effects'
 
-import * as companyTypes from '../types/companies'
-import { CompaniesService } from '../../services/Companies'
-import { setCompanies, setCurrent, resetCurrent } from '../actions/companies'
+import * as companyTypes from './companies.constant'
+import { CompaniesService } from './companies.service'
+import { setCompanies, setCurrent, resetCurrent } from './companies.actions'
 
 const service = new CompaniesService()
 
