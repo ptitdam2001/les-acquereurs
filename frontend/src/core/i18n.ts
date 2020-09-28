@@ -1,6 +1,6 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
-import { get as getConfigKey } from './services/Config'
+import { ConfigService } from './features/config'
 
 // configuration of default translation in Core Module
 // @todo extends to others modules
@@ -9,7 +9,7 @@ import EnTranslation from './i18n/en/translation.json'
 import FrTranslation from './i18n/fr/translation.json'
 
 // Init configuration
-const langConfig = getConfigKey('application.lang')
+const langConfig = ConfigService.get('application.lang')
 const i18NextInit = {
   ...langConfig,
   resources: {

@@ -41,3 +41,7 @@ export const CompanySelector: React.FC<CompanySelectorProps> = (props: CompanySe
     </FormControl>
   )
 }
+
+CompanySelector.defaultProps = {
+  value: undefined,
+}

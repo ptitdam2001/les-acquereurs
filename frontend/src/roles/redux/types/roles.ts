@@ -1,5 +1,5 @@
+import { HTTPListResponseType } from '../../../core/features/core'
 import { IRole } from '../../models/Role'
-import { HTTPListResponseType } from '../../../core/models/HTTPResponseType'
 
 export const FETCH_ALL = 'ROLES_FETCH_ALL'
 export const FETCH_ONE = 'ROLES_FETCH_ONE'

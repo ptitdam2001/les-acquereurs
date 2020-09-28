@@ -76,3 +76,8 @@ export const CompanyForm: React.FC<CompanyFormProps> = (props: CompanyFormProps)
     </Box>
   )
 }
+
+CompanyForm.defaultProps = {
+  company: undefined,
+  onSave: () => {},
+}

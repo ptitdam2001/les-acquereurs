@@ -1,7 +1,6 @@
 import { IUser } from '../models/User'
 import API from '../../core/services/Api'
-import { HTTPListResponseType } from '../../core/models/HTTPResponseType'
-import { CoreService } from '../../core/services/Core'
+import { CoreService, HTTPListResponseType } from '../../core/features/core'
 
 export class UserService implements CoreService<IUser> {
   static uri = `users`

@@ -1,5 +1,5 @@
 import React from 'react'
-import { IHouse } from '../../../models/House'
+import { IHouse } from '../../../features'
 
 type HouseMoreFormProps = {
   house?: IHouse

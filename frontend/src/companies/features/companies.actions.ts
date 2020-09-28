@@ -2,8 +2,8 @@ import { CompaniesActionTypes } from './companies.types'
 
 // import API from '../../../core/services/Api'
 import * as ActionTypes from './companies.constant'
-import { HTTPListResponseType } from '../../core/models/HTTPResponseType'
 import { ICompany } from './companies.interface'
+import { HTTPListResponseType } from '../../core/features/core'
 
 export function fetchCompanies(): CompaniesActionTypes {
   return { type: ActionTypes.FETCH_ALL }

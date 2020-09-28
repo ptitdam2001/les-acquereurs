@@ -1,6 +1,6 @@
 import { FETCH_ALL, FETCH_ONE, SET_ALL, SET_CURRENT, RESET_CURRENT, UsersActionTypes, REMOVE_ONE, ADD_OR_UPDATE } from '../types/users'
-import { HTTPListResponseType } from '../../../core/models/HTTPResponseType'
 import { IUser } from '../../models/User'
+import { HTTPListResponseType } from '../../../core/features/core'
 
 export function fetchUsers(): UsersActionTypes {
   return { type: FETCH_ALL }

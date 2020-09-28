@@ -1,8 +1,7 @@
-import { IHouse } from '../models/House'
+import { IHouse } from './houses.interface'
 
 import API from '../../core/services/Api'
-import { HTTPListResponseType } from '../../core/models/HTTPResponseType'
-import { CoreService } from '../../core/services/Core'
+import { HTTPListResponseType, CoreService } from '../../core/features/core'
 
 export class HousesService implements CoreService<IHouse> {
   static uri = `houses`

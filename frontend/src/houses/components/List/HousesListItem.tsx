@@ -7,8 +7,8 @@ import { faTrash, faFolder, faFolderOpen, faCheckCircle, faTimesCircle, faEdit }
 import { Link, useRouteMatch } from 'react-router-dom'
 
 import { Address } from '../../../core/components'
-import { IHouse } from '../../models/House'
 import styles from './HousesListItem.style'
+import { IHouse } from '../../features'
 
 const useStyle = makeStyles(styles)
 

@@ -1,8 +1,7 @@
 import { AxiosResponse } from 'axios'
 
 import API from '../../core/services/Api'
-import { HTTPListResponseType } from '../../core/models/HTTPResponseType'
-import { CoreService } from '../../core/services/Core'
+import { HTTPListResponseType, CoreService } from '../../core/features/core'
 import { ICompany } from './companies.interface'
 
 export class CompaniesService implements CoreService<ICompany> {

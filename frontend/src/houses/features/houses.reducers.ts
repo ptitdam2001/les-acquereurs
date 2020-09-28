@@ -1,7 +1,6 @@
-import { IHouse } from '../../models/House'
-import { HousesState } from '../system/houses'
-import { HousesActionTypes } from '../types/houses'
-import * as houseTypes from '../types/houses'
+import { HousesActionTypes } from './houses.types'
+import * as houseTypes from './houses.types'
+import { HousesState, IHouse } from './houses.interface'
 
 const defaultState: HousesState = {
   list: [],

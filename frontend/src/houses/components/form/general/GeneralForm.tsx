@@ -2,8 +2,8 @@ import React from 'react'
 import { Box, TextField, FormControl, InputLabel, InputAdornment, Button, makeStyles, Select, MenuItem, FormHelperText, TextareaAutosize, FormControlLabel, Switch } from '@material-ui/core'
 import { useTranslation } from 'react-i18next'
 
-import * as ConfigService from '../../../../core/services/Config'
 import style from './HouseGeneralForm.style'
+import { ConfigService } from '../../../../core/features/config'
 
 const houseTypes: string[] = ConfigService.get('houseTypes.values')
 

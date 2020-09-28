@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { AppBar, Toolbar, IconButton, Typography, Box } from '@material-ui/core'
-import { Link, useParams, useHistory } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 import BackIcon from '@material-ui/icons/ChevronLeft'
 import { useDispatch, useSelector } from 'react-redux'
@@ -11,7 +11,8 @@ import { IRole } from '../../../roles/models/Role'
 import { RoleForm } from '../../../roles/components'
 
 export const RolesAdminEdit: React.FC = () => {
-  const { id } = useParams()
+  // const { id } = useParams()
+  const id = ''
   const history = useHistory()
   const dispatch = useDispatch()
 

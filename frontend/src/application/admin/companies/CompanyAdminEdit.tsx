@@ -9,7 +9,10 @@ import { fetchCompany, resetCurrent, ICompany } from '../../../companies/feature
 import { RootState } from '../../store'
 
 export const CompanyAdminEdit: React.FC = () => {
-  const { id } = useParams()
+  console.log('_____', useParams())
+  const id = ''
+
+  // const { id } = useParams()
   const history = useHistory()
   const dispatch = useDispatch()
 

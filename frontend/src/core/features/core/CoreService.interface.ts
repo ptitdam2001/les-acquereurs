@@ -1,4 +1,4 @@
-import { HTTPListResponseType } from '../models/HTTPResponseType'
+import { HTTPListResponseType } from './HTTPResponse.type'
 
 export interface CoreService<T> {
   getAll(): Promise<HTTPListResponseType>

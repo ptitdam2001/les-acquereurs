@@ -1,5 +1,5 @@
 import './i18n'
 
-import houses from './redux/reducers/houses'
+import houses from './features/houses.reducers'
 
 export const houseReducer = houses

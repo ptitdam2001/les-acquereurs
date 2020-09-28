@@ -4,11 +4,10 @@ import { makeStyles } from '@material-ui/styles'
 import { Box, CssBaseline } from '@material-ui/core'
 import { useDispatch } from 'react-redux'
 
-import { IHouse, getNewHouse } from '../../../models/House'
-
 import style from './HouseGeneralForm.style'
-import { createOrUpdate } from '../../../redux/actions/houses'
+
 import { GeneralForm } from './GeneralForm'
+import { createOrUpdate, getNewHouse, IHouse } from '../../../features'
 
 const useStyle = makeStyles(style)
 
@@ -28,21 +27,19 @@ export const HouseGeneralForm: React.FC<HouseGeneralFormProps> = (props: HouseGe
     if (onSave) {
       onSave()
     }
-  };
+  }
 
-  const defaultValues = house
-    ? house
-    : getNewHouse()
+  const defaultValues = house || getNewHouse()
 
   return (
     <Box className={classes.root}>
       <CssBaseline />
-      <Formik
-        enableReinitialize
-        initialValues={defaultValues}
-        onSubmit={handleSubmit}
-        component={GeneralForm}
-      />
+      <Formik enableReinitialize initialValues={defaultValues} onSubmit={handleSubmit} component={GeneralForm} />
     </Box>
   )
+}
+
+HouseGeneralForm.defaultProps = {
+  house: undefined,
+  onSave: () => {},
 }

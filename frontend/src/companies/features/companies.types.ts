@@ -1,6 +1,6 @@
+import { HTTPListResponseType } from '../../core/features/core/HTTPResponse.type'
 import { SET_ALL, FETCH_ONE, FETCH_ALL, SET_CURRENT, REMOVE_ONE, RESET_CURRENT, ADD_OR_UPDATE } from './companies.constant'
 
-import { HTTPListResponseType } from '../../core/models/HTTPResponseType'
 import { ICompany } from './companies.interface'
 
 interface FetchCompaniesAction {

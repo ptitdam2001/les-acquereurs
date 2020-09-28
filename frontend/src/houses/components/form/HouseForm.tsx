@@ -4,7 +4,6 @@ import { Button, Box, Divider, makeStyles } from '@material-ui/core'
 import { useTranslation } from 'react-i18next'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
-import { IHouse } from '../../models/House'
 import { HouseGeneralForm } from './general/HouseGeneralForm'
 import { HouseRoomsForm } from './rooms/HouseRoomsForm'
 import { HouseAddressForm } from './address/HouseAddressForm'
@@ -12,6 +11,7 @@ import { HouseMoreForm } from './more/HouseMoreForm'
 import { HouseMediaForm } from './media/HouseMediaForm'
 
 import styles from './HouseForm.style'
+import { IHouse } from '../../features'
 
 const useStyles = makeStyles(styles)
 
@@ -81,4 +81,9 @@ export const HouseForm: React.FC<HouseFormProps> = (props: HouseFormProps) => {
       </Box>
     </Box>
   )
+}
+
+HouseForm.defaultProps = {
+  house: undefined,
+  onSave: () => {},
 }

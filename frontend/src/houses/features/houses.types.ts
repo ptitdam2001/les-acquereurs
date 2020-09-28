@@ -1,6 +1,6 @@
-import { IActionResult } from './../../../core/models/IActionResult';
-import { HTTPListResponseType } from '../../../core/models/HTTPResponseType'
-import { IHouse } from '../../models/House'
+import { HTTPListResponseType } from '../../core/features/core'
+import { IActionResult } from '../../core/models/IActionResult'
+import { IHouse } from './houses.interface'
 
 export const FETCH_ONE = 'HOUSES_FETCH_ONE'
 export const FETCH_ALL = 'HOUSES_FETCH_ALL'
@@ -13,9 +13,9 @@ export const RESET_CURRENT = 'HOUSES_RESET_CURRENT'
 export const ADD_OR_UPDATE = 'HOUSES_ADD_OR_UPDATE'
 export const REMOVE_ONE = 'HOUSES_REMOVE'
 
-export const TOGGLE_IS_LOADING = 'HOUSES_TOGGLE_IS_LOADING';
+export const TOGGLE_IS_LOADING = 'HOUSES_TOGGLE_IS_LOADING'
 
-export const SET_LAST_ACTION = 'HOUSES_SET_LAST_ACTION';
+export const SET_LAST_ACTION = 'HOUSES_SET_LAST_ACTION'
 
 interface FetchHousesAction {
   type: typeof FETCH_ALL
@@ -60,5 +60,4 @@ interface SetLastAction {
   value: IActionResult | undefined
 }
 
-export type HousesActionTypes = FetchHousesAction | FetchHouseAction | SetHousesAction | SetHouseAction
-  | ResetCurrentAction | RemoveOneAction | CreateOrUpdateAction | ToggleIsLoading | SetLastAction
+export type HousesActionTypes = FetchHousesAction | FetchHouseAction | SetHousesAction | SetHouseAction | ResetCurrentAction | RemoveOneAction | CreateOrUpdateAction | ToggleIsLoading | SetLastAction

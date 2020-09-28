@@ -1,4 +1,4 @@
-import { HTTPListResponseType } from '../../../core/models/HTTPResponseType'
+import { HTTPListResponseType } from '../../../core/features/core'
 import { IUser } from '../../models/User'
 
 export const FETCH_ONE = 'USERS_FETCH_ONE'

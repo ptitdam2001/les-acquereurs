@@ -62,7 +62,7 @@ export const UserForm: React.FC<UserFormProps> = (props: UserFormProps) => {
 
   useEffect(() => {
     formik.setValues(user || defaultVal)
-  }, [user])
+  }, [user, formik])
 
   return (
     <Box className={classes.root}>
@@ -96,4 +96,9 @@ export const UserForm: React.FC<UserFormProps> = (props: UserFormProps) => {
       </form>
     </Box>
   )
+}
+
+UserForm.defaultProps = {
+  onSave: () => {},
+  user: undefined,
 }

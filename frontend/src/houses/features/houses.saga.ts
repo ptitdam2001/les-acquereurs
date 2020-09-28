@@ -1,8 +1,8 @@
 import { put, takeLatest, takeEvery, call, all } from 'redux-saga/effects'
 
-import * as houseTypes from '../types/houses'
-import { HousesService } from '../../services/houses'
-import { setHouses, setCurrent, resetCurrent, toggleIsLoading } from '../actions/houses'
+import * as houseTypes from './houses.types'
+import { HousesService } from './houses.service'
+import { setHouses, setCurrent, resetCurrent, toggleIsLoading } from './houses.actions'
 
 const service = new HousesService()
 

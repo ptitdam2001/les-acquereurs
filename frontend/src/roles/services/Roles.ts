@@ -1,8 +1,7 @@
 import { AxiosResponse } from 'axios'
+import { CoreService, HTTPListResponseType } from '../../core/features/core'
 import API from '../../core/services/Api'
 import { IRole } from '../models/Role'
-import { HTTPListResponseType } from '../../core/models/HTTPResponseType'
-import { CoreService } from '../../core/services/Core'
 
 export class RolesService implements CoreService<IRole> {
   static uri = `roles`

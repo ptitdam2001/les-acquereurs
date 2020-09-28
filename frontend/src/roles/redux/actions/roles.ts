@@ -1,6 +1,6 @@
+import { HTTPListResponseType } from '../../../core/features/core'
 import { IRole } from '../../models/Role'
 import { FETCH_ALL, FETCH_ONE, SET_ALL, SET_CURRENT, RESET_CURRENT, RolesActionTypes, REMOVE_ONE, ADD_OR_UPDATE } from '../types/roles'
-import { HTTPListResponseType } from '../../../core/models/HTTPResponseType'
 
 export function fetchRoles(): RolesActionTypes {
   return { type: FETCH_ALL }

@@ -3,11 +3,10 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Table, TableHead, TableRow, TableCell, TableBody, makeStyles } from '@material-ui/core'
 
 import { useTranslation } from 'react-i18next'
-import { fetchHouses } from '../../redux/actions/houses'
 import { HousesListItem } from './HousesListItem'
 import styles from './HousesList.style'
 import { RootState } from '../../../application/store'
-import { IHouse } from '../../models/House'
+import { fetchHouses, IHouse } from '../../features'
 
 const useStyles = makeStyles(styles)
 

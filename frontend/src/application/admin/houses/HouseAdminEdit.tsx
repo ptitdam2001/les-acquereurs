@@ -1,17 +1,17 @@
 import React, { useEffect } from 'react'
 import { AppBar, Toolbar, IconButton, Typography, Box } from '@material-ui/core'
-import { Link, useParams, useHistory } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 import BackIcon from '@material-ui/icons/ChevronLeft'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { fetchHouse, resetCurrent } from '../../../houses/redux/actions/houses'
 import { HouseForm } from '../../../houses/components'
-import { IHouse } from '../../../houses/models/House'
-import { getCurrentHouse } from '../../../houses/redux/selectors/houses'
+
+import { houseSelectors, IHouse, fetchHouse, resetCurrent } from '../../../houses/features'
 
 export const HouseAdminEdit: React.FC = () => {
-  const { id } = useParams()
+  // const { id } = useParams()
+  const id = ''
   const history = useHistory()
   const dispatch = useDispatch()
 
@@ -30,7 +30,7 @@ export const HouseAdminEdit: React.FC = () => {
     }
   }, [dispatch, id])
 
-  const house: IHouse | undefined = useSelector(getCurrentHouse)
+  const house: IHouse | undefined = useSelector(houseSelectors.getCurrentHouse)
 
   return (
     <>

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { makeStyles } from '@material-ui/styles'
-import { IHouse } from '../../../models/House'
+
 import styles from './HouseRoomsForm.style'
-import { IRoom } from '../../../models/Room'
+
 import { HouseRoomField } from './HouseRoomField'
+import { IHouse, IRoom } from '../../../features'
 
 type HouseRoomsFormProps = {
   house?: IHouse
@@ -27,9 +28,16 @@ export const HouseRoomsForm: React.FC<HouseRoomsFormProps> = (props: HouseRoomsF
     console.log('_______validate: ', entity)
   }
 
-  return <div className={classes.root}>
-    {
-      rooms.map((roomItem, idx) => <HouseRoomField room={roomItem} onValidate={onValidateRoom} key={`roomField-${idx}`} />)
-    }
-  </div>
+  return (
+    <div className={classes.root}>
+      {rooms.map((roomItem, idx) => (
+        // eslint-disable-next-line react/no-array-index-key
+        <HouseRoomField room={roomItem} onValidate={onValidateRoom} key={`roomField-${idx}`} />
+      ))}
+    </div>
+  )
+}
+
+HouseRoomsForm.defaultProps = {
+  house: undefined,
 }
