@@ -6,9 +6,8 @@ import BackIcon from '@material-ui/icons/ChevronLeft'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { RootState } from '../../store'
-import { IUser } from '../../../users/models/User'
-import { fetchUser, resetCurrent } from '../../../users/redux/actions/users'
-import { UserForm } from '../../../users/components/form/UserForm'
+import { UserForm } from '../../../users/components/User/form/UserForm'
+import { fetchUser, IUser, resetCurrent } from '../../../users/features/users'
 
 export const UsersAdminEdit: React.FC = () => {
   // const { id } = useParams()

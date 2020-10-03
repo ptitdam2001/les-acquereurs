@@ -6,9 +6,9 @@ import BackIcon from '@material-ui/icons/ChevronLeft'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { RootState } from '../../store'
-import { fetchRole, resetCurrent } from '../../../roles/redux/actions/roles'
-import { IRole } from '../../../roles/models/Role'
-import { RoleForm } from '../../../roles/components'
+import { RoleForm } from '../../../users/components/Role'
+import { fetchRole, IRole, resetCurrent } from '../../../users/features/roles'
+
 
 export const RolesAdminEdit: React.FC = () => {
   // const { id } = useParams()

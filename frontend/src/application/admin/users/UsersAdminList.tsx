@@ -3,8 +3,7 @@ import React from 'react'
 import { AppBar, Toolbar, IconButton, Typography, Box } from '@material-ui/core'
 import PlusIcon from '@material-ui/icons/Add'
 import { useRouteMatch, Link } from 'react-router-dom'
-
-import { UsersList } from '../../../users/components'
+import { UsersList } from '../../../users/components/User'
 
 export const UsersAdminList: React.FC = () => {
   const match = useRouteMatch()

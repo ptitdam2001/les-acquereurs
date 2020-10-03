@@ -6,22 +6,21 @@ import createSagaMiddleware from 'redux-saga'
 import { companyReducer } from '../companies'
 import { houseReducer } from '../houses'
 import coreReducers from '../core/reducer'
-import roleReducers from '../roles/reducer'
-import userReducers from '../users/reducer'
+import { userReducer, roleReducer } from '../users'
 
 import companySaga from '../companies/features/companies.saga'
 import coreSaga from '../core/features/countries/countries.saga'
 import houseSaga from '../houses/features/houses.saga'
-import roleSaga from '../roles/redux/sagas'
-import userSaga from '../users/redux/sagas'
+import roleSaga from '../users/features/roles/roles.saga'
+import userSaga from '../users/features/users/users.saga'
 
 const sagaMiddleware = createSagaMiddleware()
 
 const rootReducer = combineReducers({
   companies: companyReducer,
   houses: houseReducer,
-  roles: roleReducers,
-  users: userReducers,
+  roles: roleReducer,
+  users: userReducer,
   ...coreReducers,
 })
 

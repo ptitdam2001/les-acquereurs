@@ -6,7 +6,7 @@ import { AppBar, Toolbar, IconButton, Typography, Box } from '@material-ui/core'
 import PlusIcon from '@material-ui/icons/Add'
 
 import { useRouteMatch, Link } from 'react-router-dom'
-import { RolesList } from '../../../roles/components'
+import { RolesList } from '../../../users/components/Role'
 
 export const RolesAdminList: React.FC = () => {
   const match = useRouteMatch()

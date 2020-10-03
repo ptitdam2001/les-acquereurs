@@ -1,6 +1,6 @@
 import { IAddress } from '../../core/models/Address'
 import { IActionResult } from '../../core/models/IActionResult'
-import { IUser } from '../../users/models/User'
+import { IUser } from '../../users/features/users'
 
 export const getNewHouse = () => {
   const price = {

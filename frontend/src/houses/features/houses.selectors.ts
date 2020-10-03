@@ -8,3 +8,5 @@ export const getCurrentHouse = (state: RootState) => getHouseState(state).curren
 export const isLoading = (state: RootState) => getHouseState(state).isLoading
 
 export const getLastAction = (state: RootState) => getHouseState(state).lastAction
+
+export const getList = (state: RootState) => getHouseState(state).list
